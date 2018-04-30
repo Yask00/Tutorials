@@ -1,0 +1,5 @@
+https://github.com/penumbragames/tankanarchy
+
+npm install
+bower install
+gulp
