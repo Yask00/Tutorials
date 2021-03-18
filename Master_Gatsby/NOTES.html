@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Gatsby - Static site generator, fast, has build step</li>
+        <li>Get data and what template its on and returns page</li>
+        at build time taking some time to regenarate
+        <li>Loads css before the content - criical css</li>
+        <li> Does rehydration - static html -> when it loads -> fully featured react application
+        </li>
+        <li> Images are blurry - lazy loading (compressing, turned to webp) then loaded
+        </li>
+        <li>Huge plugin eco system - offline access, youtube inbeds
+        </li>
+        <li>it is not cms - we use sanity (or contentful on the blog)
+        </li>
+    </ul>
+
+    <ul>
+        <li>Public folder is where the build files will go</li>
+        <li>Template vs pages folder</li>
+        <li>Templates are reusable like pagination</li>
+        <li>Pages folder - can be generated dynamically or based on files</li>
+        <li>In pages important is the index file</li>
+    </ul>
+
+    <ul>
+        <li> Layout component to wrap different pages with shared nav/footer + their contents
+        </li>
+        <li>gatsby-browser.js specific file to hook to different gatsby api's</li>
+        <li> for example wrap pages with Layout
+        </li>
+        <li>gatsby-ssr.js is alternative to gatsby-browser for when the site is served from the server</li>
+    </ul>
+
+    <ul>
+        <li>make sure that all fonts and styles goes through gatsby and it puts them in static foder</li>
+        <li>setting font-size on html will be out base, then rems to other elements will reflect</li>
+    </ul>
+    <ul>
+        <li>sanity studioi is react based cms hosting it by ourselfs but we can deploy it to sanity.io</li>
+        <li>for sanity studio we can create custom components that we can use in the schemas to be displayed in the cms
+        </li>
+    </ul>
+
+    <ul>
+        <li>at build gatsby will gather all the data it needs to runs </li>
+        <li>in gatsby-config we set up meta data and specifying plugins that we use and set them</li>
+        <li>gatsby page queries vs gatsby static queries (graphql): (dynamic w variable vs not and top level page vs anywhere)</li>
+        <li>how graphql request witll go as props in the component -lkind of magically gatsby recognisex the export of gql coponet from the page and stick it to props.data</li>
+        <li>a lot of destructuring and setting fields to clear and readable constant like ({...data}) from props.data and pizzas = data.pizzas.nodes</li>
+        <li>singleItem component is used in only one place in listComponent, it can be in the same file/folder</li>
+    </ul>
+    
+    <ul>
+        <li>gatsby makes resizing and compression of images much faster</li>
+        <li>gatsby image or sanity image pipeline - different formats, base64, ratios, fluid vs fixed images width/height</li>
+    </ul>
+    
+    <ul>
+        <li>In gatsby node we can dynamically create pages with their slugs ect</li>
+    </ul>
+    
+
+    In gatsby we have specific Root component, we could wrap the root element into context with function, use the context in child component/custom hook and set it globally
+    
+    send email should happen on the server side, but serverless funcyions look like node server except entire server this function does one thing and shuts itself after (in the demo netlify hosted function)
+
+    honeypot form defence against bots
+
+    Array.from({ length : 4 }) вместом ,,,
+
+    in the build proccess in the public folder we have files and folders (static) that is the actual generated website
+
+    REACT vs NEXTJS vs gatsby
+
+</body>
+
+</html>
